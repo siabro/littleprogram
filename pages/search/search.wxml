@@ -1,10 +1,18 @@
 <view class='box'>
   <view class='header'>
-    <form bindsubmit='formSubmit' bindreset='formReset' style='border:1px solid black'>
-      <view>
-        <input class='inp' placeholder-class='inp-hold' type='text' placeholder='{{ hold }}' bindinput='inpMess'></input>
+    <form bindsubmit='formSubmit' bindreset='formReset' class='form'>
+      <view class='formBox'>
+        <input class='inp' type='text' placeholder='请输入内容' bindinput='inpMess'  focus='true' bindconfirm='formSubmit' confirm-type='搜索'></input>
         <button class='reset' form-type='reset'>X</button>
       </view>
     </form>
   </view>
+  <view class='container'>
+    <view class='resultList' wx:for='{{ searchList }}' wx:key='key'>
+      {{ item.name }}
+      <image src='{{ item.picurl }}'></image>
+    </view>
+  </view>
+  
+  
 </view>

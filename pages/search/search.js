@@ -4,22 +4,29 @@ const app = getApp()
 Page({
   data:{
     inputMess: '',
-    hold: '请输入内容'
+    searchList: []
   },
-  formSubmit: function() {
-
-  },
-  inpMess: function(e) {
+  inpMess: function (e) {
     this.setData({
       inputMess: e.detail.value
     })
   },
-  formReset: function() {
-    // if (this.data.inputMess !== '') {
-    //   console.log(this.data)
-    //   this.setData({
-    //     inputMess: ''
-    //   })  
-    // }
+  formSubmit: function() {
+    var that = this;
+    wx.request({
+      url: 'https://api.imjad.cn/cloudmusic/',
+      data: {
+        type: 'search',
+        s: this.data.inputMess
+      },
+      success: function(res) {
+        // console.log(res.data)
+        that.setData({
+          searchList: res.data.result.songs
+        })
+        console.log(that.data.searchList)
+      }
+    })
   }
+  
 })
