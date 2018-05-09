@@ -1,0 +1,45 @@
+.box {
+  width:100%;
+  height:400rpx;
+  box-sizing: border-box;
+}
+.header {
+  width: 80%;
+  height: 80rpx;
+  margin: 0 auto;
+  border: 1px solid red;
+  line-height: 80rpx;
+}
+form {
+  display: flex;
+  flex-direction: row;
+}
+.inp {
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  padding-left: 20px;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  border-radius: 30rpx;
+  background: gainsboro;
+}
+.inp-hold {
+  font: 14px/50px "simhei";
+}
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.reset {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: red; 
+  /* display: flex;  */
+  font-size: 12px;
+  text-align: center;  
+  line-height: 20px;
+  /* vertical-align: middle; */
+}

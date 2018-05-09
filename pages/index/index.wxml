@@ -1,0 +1,14 @@
+<form bindsubmit='formSubmit'>
+   <view>类型：28314060
+    <picker class='pick' value='{{index}}' range='{{selectType}}' name='type' bindchange="bindPickerChange">
+      {{selectType[index]}}
+    </picker>
+  </view> 
+  <input class='inp' value='25657149' type='text' name='cont'></input>
+  <button form-type='submit'>提交</button>
+</form>
+<view class='player'>
+  <button class='pause' bindtap='start'>开始</button>
+  <button class='pause' bindtap='pause'>暂停</button>
+  <button class='pause' bindtap='stop'>停止</button>
+</view>

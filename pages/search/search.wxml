@@ -1,0 +1,9 @@
+<view class='box'>
+  <view class='header'>
+    <form bindsubmit='formSubmit' bindreset='formReset' style='border:1px solid black'>
+      <view>
+        <input class='inp' placeholder-class='inp-hold' type='text' placeholder='{{ hold }}' bindinput='inpMess'></input>
+      </view>
+    </form>
+  </view>
+</view>
