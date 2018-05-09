@@ -3,6 +3,7 @@
     <form bindsubmit='formSubmit' bindreset='formReset' style='border:1px solid black'>
       <view>
         <input class='inp' placeholder-class='inp-hold' type='text' placeholder='{{ hold }}' bindinput='inpMess'></input>
+        <button class='reset' form-type='reset'>X</button>
       </view>
     </form>
   </view>
