@@ -8,9 +8,11 @@
     </form>
   </view>
   <view class='container'>
-    <view class='resultList' wx:for='{{ searchList }}' wx:key='key'>
+    <view class='resultList' wx:for='{{ searchList }}' wx:key='key' bindtap='elect' id='{{ item.id }}'>
+      <view class='resultImgBox'>
+        <!-- <image src='{{ item.al.picUrl }}' class='resultImg'></image> -->
+      </view>
       {{ item.name }}
-      <image src='{{ item.picurl }}'></image>
     </view>
   </view>
   

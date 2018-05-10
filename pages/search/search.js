@@ -22,11 +22,18 @@ Page({
       success: function(res) {
         // console.log(res.data)
         that.setData({
-          searchList: res.data.result.songs
+          searchList: res.data.result.songs,
+          songList: res.data.result.songs
         })
         console.log(that.data.searchList)
       }
     })
+  },
+  elect: function(e) {
+    app.data.songId = e.target.id
+    console.log(app.data.songId)
+    wx.navigateTo({
+      url: '../index/index'
+    })
   }
-  
 })

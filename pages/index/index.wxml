@@ -4,7 +4,7 @@
       {{selectType[index]}}
     </picker>
   </view> 
-  <input class='inp' value='25657149' type='text' name='cont'></input>
+  <input class='inp' value='' type='text' name='cont'></input>
   <button form-type='submit'>提交</button>
 </form>
 <view class='player'>
