@@ -6,18 +6,16 @@ innerAudioContext.autoplay = true
 
 Page({
   data: {
-    index: 0,
-    selectType: ['song', 'lyric', 'comments', 'detail', 'artist', 'album', 'playlist', 'record', 'mv', 'djradio', 'dj', 'detail_dj', 'search']
+    
   },
   onLoad: function() {
     wx.request({
       url: 'https://api.imjad.cn/cloudmusic/',
       method: 'GET',
       data: {
-        // type: this.data.selectType[e.detail.value.type],
-        // id: parseInt(e.detail.value.cont)
         type: 'song',
-        id: app.data.songId
+        // id: app.data.songId
+        id: 28314062
       },
       success: function (data) {
         innerAudioContext.src = data.data.data[0].url
@@ -36,22 +34,16 @@ Page({
         })
       }
     })
+  },
+  start: function() {
+    innerAudioContext.play()
+  },
+  pause: function () {
+    innerAudioContext.pause()
+  },
+  stop: function() {
+    innerAudioContext.stop()
   }
-  // formSubmit: function(e) {
-  //   console.log('form发生了submit事件，携带数据为：', e.detail.value.type)
-    
-      
-  //   })
-  // },
-  // start: function() {
-  //   innerAudioContext.play()
-  // },
-  // pause: function () {
-  //   innerAudioContext.pause()
-  // },
-  // stop: function() {
-  //   innerAudioContext.stop()
-  // }
 })
 
 

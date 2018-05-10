@@ -1,17 +1,3 @@
-/* 样式初始化 */
-button {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-.container {
-  margin: 0;
-  padding: 0;
-}
-
-.box {
-
-}
 .header {
   width: 100%;
   height: 40px;
