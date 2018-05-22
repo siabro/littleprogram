@@ -4,10 +4,18 @@ const app = getApp()
 
 Page({
   data:{
-    searchList: []
+    searchList: [],
+    inputMess: '',
+    index: 0
+  },
+  inpMess: function (e) {
+    this.setData({
+      inputMess: e.detail.value
+    })
   },
   formSubmit: function() {
     var that = this;
+    console.log(this.data.inputMess)
     if (this.data.inputMess === '') {
       console.log('内容不能为空')
     } else {
@@ -18,10 +26,10 @@ Page({
           s: this.data.inputMess
         },
         success: function (res) {
-          // console.log(res.data)
+          console.log(res.data.result.songs)
+          // app.data.songList = res.data
           that.setData({
             searchList: res.data.result.songs,
-            songList: res.data.result.songs
           })
           console.log(that.data.searchList)
         }
@@ -29,9 +37,15 @@ Page({
     }
   },
   elect: function(e) {
+    console.log(e)
     app.data.songId = e.target.id
     wx.navigateTo({
       url: '../index/index'
     })
+    var idx = e.target.dataset.index;
+    this.setData({
+      index: idx
+    })
+    console.log(this.data.index)
   }
 })
