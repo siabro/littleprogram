@@ -26,8 +26,8 @@ Page({
           s: this.data.inputMess
         },
         success: function (res) {
-          console.log(res.data.result.songs)
-          // app.data.songList = res.data
+          // console.log(res.data.result.songs)
+          app.data.songList = res.data.result.songs
           that.setData({
             searchList: res.data.result.songs,
           })
@@ -37,15 +37,18 @@ Page({
     }
   },
   elect: function(e) {
-    console.log(e)
+    console.log(e.target.dataset)
+    var that = this
+    var idx = e.target.dataset.index
     app.data.songId = e.target.id
     wx.navigateTo({
       url: '../index/index'
     })
-    var idx = e.target.dataset.index;
-    this.setData({
-      index: idx
-    })
-    console.log(this.data.index)
+    // var idx = e.target.dataset.index;
+    // this.setData({
+    //   index: idx
+    // })
+    console.log(e.target.dataset)
+    // console.log(this.idx)
   }
 })

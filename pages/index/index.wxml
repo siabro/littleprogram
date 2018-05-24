@@ -7,6 +7,7 @@
   <input class='inp' value='' type='text' name='cont'></input>
   <button form-type='submit'>提交</button>
 </form> -->
+
 <view class='player'>
   <button class='pause' bindtap='start'>开始</button>
   <button class='pause' bindtap='pause'>暂停</button>
