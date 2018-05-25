@@ -44,11 +44,11 @@ Page({
     wx.navigateTo({
       url: '../index/index'
     })
-    // var idx = e.target.dataset.index;
+    var idx = e.target.dataset.index;
+    app.data.index = idx;
     // this.setData({
     //   index: idx
     // })
-    console.log(e.target.dataset)
-    // console.log(this.idx)
+    console.log(e.target.dataset.index)
   }
 })

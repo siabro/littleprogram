@@ -5,19 +5,17 @@ const innerAudioContext = wx.createInnerAudioContext()
 innerAudioContext.autoplay = true
 
 Page({
-  data: {
-    
-  },
   onLoad: function() {
     wx.request({
       url: 'https://api.imjad.cn/cloudmusic/',
       method: 'GET',
       data: {
         type: 'song',
-        // id: app.data.songId
-        id: 28314062
+        // id: app.data.songList[app.data.index].al.id
+        id: 28314060
       },
       success: function (data) {
+        console.log(data)
         innerAudioContext.src = data.data.data[0].url
         innerAudioContext.onPlay(() => {
           console.log('开始播放')
