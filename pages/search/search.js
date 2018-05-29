@@ -37,7 +37,6 @@ Page({
     }
   },
   elect: function(e) {
-    console.log(e.target.dataset)
     var that = this
     var idx = e.target.dataset.index
     app.data.songId = e.target.id

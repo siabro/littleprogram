@@ -6,6 +6,7 @@ innerAudioContext.autoplay = true
 
 Page({
   onLoad: function() {
+    // console.log(typeof app.data.songList[app.data.index].al.id)
     wx.request({
       url: 'https://api.imjad.cn/cloudmusic/',
       method: 'GET',
